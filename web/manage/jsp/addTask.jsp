@@ -55,6 +55,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                   </tr>
                 <tr>                   
                     <td class="kv-label">录入日期</td>
+
                     <td class="kv-content">${requestScope.tax.recordDate }</td>
                     <td class="kv-label">录入人员</td>
                     <td class="kv-content">${requestScope.tax.taxerName }</td>
@@ -63,6 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </table>
             <div class="column"><span class="current">任务信息</span></div>
             <form id="addTask">
+                <input type="hidden" name="recordTaskDate" value="${requestScope.tax.recordDate }">
             <input type="hidden" name="payerId" value=${requestScope.tax.id}>
             <table class="kv-table">   	
                 <tbody>

@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <td class="kv-content">
                             <select name="taxOrganid">
                                 <c:forEach items="${requestScope.tax2}" var="tax2">
-                                    <option  ${tax2.id == requestScope.tax.taxOrganid ? "selected" : ""} value="${tax2.id}">${tax2.organName}</option>
+                                    <option ${tax2.id == requestScope.tax.taxOrganId ? "selected":"" } value="${tax2.id}">${tax2.organName}</option>
                                 </c:forEach>
                             </select>
                         </td>

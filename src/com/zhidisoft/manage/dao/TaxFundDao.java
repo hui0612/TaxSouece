@@ -17,11 +17,12 @@ public class TaxFundDao {
                         int approverId,
                         int executeId,
                         String executeTime,
-                        String taskState){
+                        String taskState,
+                        String recordTaskDate){
         String sql = "insert into tb_tax_source (payerId,taskName,subOrganId,approverId,executeId,executeTime," +
-                "taskState) values (?,?,?,?,?,?,?)";
+                "taskState,recordTaskDate) values (?,?,?,?,?,?,?,?)";
         boolean update = DBUtil.update(sql, payerId, taskName, subOrganId, approverId,
-                executeId, executeTime, taskState);
+                executeId, executeTime, taskState,recordTaskDate);
         return update;
     }
 

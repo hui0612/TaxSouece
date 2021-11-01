@@ -37,8 +37,9 @@ public class InsertTaskServlet extends HttpServlet {
         String taskState = req.getParameter("taskState") == null ? "":  req.getParameter("taskState");
         System.out.println(123456789);
         System.out.println(payerId);
+        String recordTaskDate = req.getParameter("recordTaskDate") == null ? "" : req.getParameter("recordTaskDate");
         TaxFundDao tf = new TaxFundDao();
-        boolean add = tf.add(payerId, taskName, subOrganId, approverId, executeId, executeTime, taskState);
+        boolean add = tf.add(payerId, taskName, subOrganId, approverId, executeId, executeTime, taskState,recordTaskDate);
         Map<String,String> mp = new HashMap<>();
         if(add == true ){
           mp.put("msg","成功") ;
